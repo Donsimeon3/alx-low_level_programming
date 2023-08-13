@@ -1,11 +1,9 @@
 #include <stdio.h>
-
 /**
  * main - A program that show size of a computer type
  *
  * Return: O on success
  */
-
 int main(void)
 {
 	printf("size of a char: %lu byte(s)\n", sizeof(char));
