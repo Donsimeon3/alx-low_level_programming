@@ -2,7 +2,7 @@
 /**
  * main - A program that show size of a computer type
  *
- * Return: O on success
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
