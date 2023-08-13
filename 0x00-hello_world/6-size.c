@@ -3,7 +3,7 @@
 /**
  * main - program that points the size of various computer types
  *
- * Return: 0
+ * Return: O on success
  */
 
 int main(void)
@@ -13,5 +13,5 @@ int main(void)
 	printf("size of a long int: %lu byte(s)", sizeof(long int));
 	printf("size of a long long int:%lu byte(s)", sizeof(long long int));
 	printf("size of a float: %lu byte(s)", sizeof(float));
-	Return(0);
+	return (0);
 }
