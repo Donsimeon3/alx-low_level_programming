@@ -18,6 +18,6 @@ int main(void)
 	else if (n == 0)
 		printf("%d is zero\n", n);
 	else
-		printf("%d id negstive\n", n);
+		printf("%d is negstive\n", n);
 	return (0);
 }
