@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * main - check the code for Holberton School students.
  *
- * Return: 0 (success)
+ * Return: Always 0.
  */
 int main(void)
-{i
+{
 	jack_bauer();
 	return (0);
 }
