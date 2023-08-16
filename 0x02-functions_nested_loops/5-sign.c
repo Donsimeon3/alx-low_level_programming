@@ -2,28 +2,16 @@
 
 /**
  * print_sign - prints the sign of a number
- * @n: to check the number
- * Return: 1 for positive number, -1 for negative number or zero for anything
+ * @n: the int to check
+ * Return: 1 and prints + if n is greater than zero
+ * 0 and prints 0 if n is zero
+ * -1 an prints - i n is less than zero
  */
-
 int print_sign(int n)
-
 {
-
 	if (n > 0)
 	{
-	-putchar(43);
-	return (1);
-	}
-	else if (n < 0)
-	{
-	_putchar(45);
-	return(-1);
-	}
-	else
-	{
-	_putchar(48);
-	return (0);
-	}
+		-putchar('+');
+		return (1);
+	} else if (n == 0)
 }
-
