@@ -3,7 +3,7 @@
 /**
  * main - check the code for Holberton School students.
  *
- * Return: Always 0.
+ * Return: 0 (success)
  */
 int main(void)
 {
