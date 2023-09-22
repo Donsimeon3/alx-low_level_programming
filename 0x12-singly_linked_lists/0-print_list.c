@@ -5,7 +5,7 @@
  * print_list - all elements are printed on the linked list.
  * @h: pointer on list_t list to print
  *
- * Return: number of nod printed
+ * Return: number of node printed
  */
 
 size_t print_list(const list_t *h)
