@@ -6,10 +6,10 @@ char *create_buffer(char *file);
 void close_file(int fd);
 
 /**
- * create_buffer - Allocate 1024 bytes to buffer
- * @file: name of files buffer is storing chars for
+ * create_buffer - Allocates 1024 bytes for a buffer
+ * @file: name of the file buffer is storing chars for
  *
- * Return: A pointer to the newly-allocated buffer.
+ * Return: pointer to newly-allocated buffer
  */
 
 char *create_buffer(char *file)
@@ -20,7 +20,8 @@ char *create_buffer(char *file)
 
 	if (buffer == NULL)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file);
+		dprintf(STDERR_FILENO,
+			"Error: Can't write to %s\n", file);
 		exit(99);
 	}
 
@@ -28,8 +29,8 @@ char *create_buffer(char *file)
 }
 
 /**
- * close_file - Close files descriptor
- * @fd: file descriptor to be closed
+ * close_file - Closes file descriptor
+ * @fd: file descriptor to be close
  */
 
 void close_file(int fd)
@@ -46,16 +47,16 @@ void close_file(int fd)
 }
 
 /**
- * main - Copy contents of a files to another file
- * @argc: number of arguments supplies to program
- * @argv: array of pointer to argument
+ * main - Copy contents of file to another file
+ * @argc: number of arguments supplied program
+ * @argv: array of pointer to the argument
  *
  * Return: 0 (successful)
  *
- * Description: If argument count is incorrect - exit code 97.
- * If file_from does not exist or can not be read - exit code 98.
- * when file_to cannot be created or written to - exit code 99.
- * If file_to or file_from cannot be closed - exit code 100.
+ * Description: If the argument count is incorrect - exit code 97
+ * If file_from does not exist or can not be read - exit code 98
+ * If file_to cannot be created or written to - exit code 99
+ * If file_to or file_from can not be closed - exit code 100
  */
 
 int main(int argc, char *argv[])
@@ -77,7 +78,8 @@ int main(int argc, char *argv[])
 	do {
 		if (from == -1 || r == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+			dprintf(STDERR_FILENO,
+				"Error: Can't read from file %s\n", argv[1]);
 			free(buffer);
 			exit(98);
 		}
@@ -85,7 +87,8 @@ int main(int argc, char *argv[])
 		w = write(to, buffer, r);
 		if (to == -1 || w == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			dprintf(STDERR_FILENO,
+				"Error: Can't write to %s\n", argv[2]);
 			free(buffer);
 			exit(99);
 		}
@@ -98,5 +101,6 @@ int main(int argc, char *argv[])
 	free(buffer);
 	close_file(from);
 	close_file(to);
+
 	return (0);
 }

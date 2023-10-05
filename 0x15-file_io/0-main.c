@@ -5,9 +5,8 @@
 /**
  * main - check the code
  *
- * Return: 0 (successful)
+ * Return: Always 0.
  */
-
 int main(int ac, char **av)
 {
 	ssize_t n;
