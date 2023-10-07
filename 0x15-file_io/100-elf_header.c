@@ -183,6 +183,17 @@ void print_osabi(unsigned char *e_ident)
 }
 
 /**
+ * print_abi - Prints the ABI version of ELF headers
+ * @e_ident: Pointer to array containing the ELF ABI version
+ */
+
+void print_abi(unsigned char *e_ident)
+{
+	printf(" ABI Version: %d\n",
+		e_ident[EI_ABIVERSION]);
+}
+
+/**
  * print_type - Prints the type of ELF headers
  * @e_type: The ELF type
  * @e_ident: A pointer to array containing the ELF class
