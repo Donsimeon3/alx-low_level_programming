@@ -252,22 +252,6 @@ void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 		printf("%#lx\n", e_entry);
 }
 
-/**
- * close_elf - Closes an ELF files
- * @elf: The file descriptor of ELF files
- *
- * Description: If the files can not be closed - exit code 98
- */
-
-void close_elf(int elf)
-{
-	if (close(elf) == -1)
-	{
-		dprintf(STDERR_FILENO,
-			"Error: Can't close fd %d\n", elf);
-		exit(98);
-	}
-}
 
 /**
  * main - Displays the information contained in the
